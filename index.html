@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Morse Code Translator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+
+    <div class="container">
+        <header>
+            <h1>Morse Code Translator</h1>
+            <div class="theme-switcher">
+                <p>Choose Theme:</p>
+                <div class="theme-buttons">
+                    <button class="theme-btn" data-theme="light">Light</button>
+                    <button class="theme-btn" data-theme="dark">Dark</button>
+                    <button class="theme-btn" data-theme="ocean">Ocean</button>
+                    <button class="theme-btn" data-theme="sunset">Sunset</button>
+                    <button class="theme-btn" data-theme="forest">Forest</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="translator-section">
+            <div class="io-panel input-panel">
+                <div class="panel-header">
+                    <h2>Text</h2>
+                    <div class="panel-controls">
+                        <span id="text-char-count">0 characters</span>
+                        <button id="copy-text-btn" class="icon-btn" title="Copy Text"><i class="far fa-copy"></i></button>
+                    </div>
+                </div>
+                <textarea id="text-input" placeholder="Enter text to encode..."></textarea>
+            </div>
+
+            <div class="io-panel output-panel">
+                <div class="panel-header">
+                    <h2>Morse Code</h2>
+                    <div class="panel-controls">
+                        <span id="morse-char-count">0 characters</span>
+                        <button id="copy-morse-btn" class="icon-btn" title="Copy Morse"><i class="far fa-copy"></i></button>
+                    </div>
+                </div>
+                <textarea id="morse-input" placeholder="Enter morse to decode..." readonly></textarea>
+            </div>
+        </main>
+        
+        <div class="controls-section">
+            <button id="clear-all-btn" class="control-btn"><i class="fas fa-trash"></i> Clear All</button>
+            <div class="audio-controls">
+                <button id="play-audio-btn" class="control-btn"><i class="fas fa-play"></i> Play Morse</button>
+                <span class="pro-tip">Pro Tip: Use '/' for space between words.</span>
+            </div>
+        </div>
+
+        <section class="reference-section">
+            <h2>Morse Code Reference</h2>
+            <div id="morse-grid" class="morse-grid">
+                <!-- Grid will be populated by JavaScript -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
